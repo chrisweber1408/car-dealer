@@ -22,4 +22,8 @@ public class CarShopService {
     public Car getOne(String id) {
         return carShopRepository.findById(id).orElseThrow();
     }
+
+    public void deleteOne(String id) {
+        carShopRepository.deleteById(id);
+    }
 }
